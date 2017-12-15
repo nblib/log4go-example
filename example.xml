@@ -22,28 +22,10 @@
         <level>DEBUG</level>
         <property name="filename">test</property>
         <property name="format">[%D %T] [%L] (%S) %M</property><!-- 日志记录格式 -->
-        <property name="rotate">true</property> <!-- 不论是按天,小时,文件大小,行数滚动,这个是总开关-->
-        <property name="maxsize">0M</property> <!-- \d+[KMG]? Suffixes are in terms of 2**10 大小滚动,为0,表示不滚动-->
-        <property name="maxlines">0K</property> <!-- \d+[KMG]? Suffixes are in terms of thousands 行数滚动,0表示不滚动-->
-        <property name="daily">false
-        </property> <!-- Automatically rotates when a log message is written after midnight -->
-        <!-- 新增按小时滚动文件 -->
-        <property name="hourly">true</property> <!-- 开启按小时滚动文件 -->
-        <property name="hourfilesuffix">_20060102_15.log
-        </property> <!-- 按小时滚动文件名称后缀模板,比如生成的文件名为"test_20060102_15.log"-->
-        <property name="hourinterval">1</property> <!-- 按小时的间隔时间,单位小时,整数-->
-
-    </filter>
-    <filter enabled="false">
-        <tag>xmllog</tag>
-        <type>xml</type>
-        <level>TRACE</level>
-        <property name="filename">trace.xml</property>
-        <property name="rotate">true</property> <!-- true enables log rotation, otherwise append -->
-        <property name="maxsize">100M</property> <!-- \d+[KMG]? Suffixes are in terms of 2**10 -->
-        <property name="maxrecords">6K</property> <!-- \d+[KMG]? Suffixes are in terms of thousands -->
-        <property name="daily">false
-        </property> <!-- Automatically rotates when a log message is written after midnight -->
+        <property name="rotatable">true</property> <!-- 不论是按天,小时,文件大小,行数滚动,这个是总开关-->
+        <property name="rottype">day</property> <!-- 文件转换事件类型,按天分割文件,按小时等等,可选值"day,hour"-->
+        <property name="rotsuffix">_200601_02.log</property> <!-- 文件后缀,比如"_200601_02.log"-->
+        <property name="rotinterval">1</property> <!-- 每次新文件保存的间隔(整数),如果是天,那就以天为单位,如果是小时,就以小时为单位 -->
     </filter>
     <filter enabled="false"><!-- enabled=false means this logger won't actually be created -->
         <tag>donotopen</tag>

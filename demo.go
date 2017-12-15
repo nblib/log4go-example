@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/log4go-example/demo1"
-	"github.com/log4go-example/demo2"
+	"github.com/nblib/log4go-example/demo1"
+	"github.com/nblib/log4go-example/demo2"
 	"time"
 )
 
