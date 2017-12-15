@@ -10,12 +10,12 @@ func main() {
 
 	demo1 := demo1.Demo1{}
 	//for i := 0; i < 10000; i++ {
-		demo1.Out()
+	demo1.Out()
 	//}
 
 	dem2 := demo2.Demo2{}
 	//for i := 0; i < 10000; i++ {
-		dem2.Out()
+	dem2.Out()
 	//}
-	time.Sleep(5* time.Second)
+	time.Sleep(1 * time.Second)
 }
