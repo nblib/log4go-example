@@ -16,7 +16,7 @@
         <!-- level is (:?FINEST|FINE|DEBUG|TRACE|INFO|WARNING|ERROR) -->
         <level>DEBUG</level>
     </filter>
-    <filter enabled="true">
+    <filter enabled="false">
         <tag>file</tag>
         <type>file</type>
         <level>DEBUG</level>
@@ -29,11 +29,11 @@
 
     </filter>
 
-    <filter enabled="false"><!-- enabled=false means this logger won't actually be created -->
+    <filter enabled="true"><!-- enabled=false means this logger won't actually be created -->
         <tag>donotopen</tag>
         <type>socket</type>
         <level>FINEST</level>
-        <property name="endpoint">192.168.1.255:12124</property> <!-- recommend UDP broadcast -->
+        <property name="endpoint">192.168.233.138:12124</property> <!-- recommend UDP broadcast -->
         <property name="protocol">udp</property> <!-- tcp or udp -->
     </filter>
 </logging>
